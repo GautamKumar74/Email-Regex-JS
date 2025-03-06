@@ -1,3 +1,5 @@
-let emailPattern = /^abc/;
-console.log(emailPattern.test("abc.xyz@bridgelabz.co.in")); // true
-console.log(emailPattern.test("xyz.abc@bridgelabz.co.in")); // false
+let emailPattern = /^abc.*@bridgelabz/;
+console.log(emailPattern.test("abc@bridgelabz")); // true
+console.log(emailPattern.test("abc.xyz@bridgelabz")); // true
+console.log(emailPattern.test("abc@xyz.co.in")); // false
+console.log(emailPattern.test("xyz@bridgelabz")); // false
